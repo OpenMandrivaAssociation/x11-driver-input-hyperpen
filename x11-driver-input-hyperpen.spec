@@ -29,14 +29,6 @@ THIS DRIVER IS BROKEN:
 Missing symbol xf86IsCorePointer no longer present due to X Input Hotplug
 rework.
 
-%package devel
-Summary: Development files for %{name}
-Group: Development/X11
-License: MIT
-
-%description devel
-Development files for %{name}
-
 %prep
 %setup -q -n xf86-input-hyperpen-%{version}
 
@@ -50,11 +42,6 @@ autoreconf -ifs
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-# Create list of dependencies
-x-check-deps.pl
-for deps in *.deps; do
-    install -D -m 644 $deps %{buildroot}/%{_datadir}/X11/mandriva/$deps
-done
 
 %clean
 rm -rf %{buildroot}
@@ -63,8 +50,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc COPYING
 %{_libdir}/xorg/modules/input/hyperpen_drv.so
-
-%files devel
-%defattr(-,root,root)
-%{_libdir}/xorg/modules/input/*.la
-%{_datadir}/X11/mandriva/*.deps

@@ -1,6 +1,6 @@
 Name: x11-driver-input-hyperpen
-Version: 1.1.0
-Release: %mkrel 7
+Version: 1.2.0
+Release: %mkrel 1
 Summary: X.org input driver for HyperPen devices
 Group: Development/X11
 URL: http://xorg.freedesktop.org
@@ -12,17 +12,11 @@ BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
 Conflicts: xorg-x11-server < 7.0
 
-Patch1: 0001-Don-t-check-if-the-device-is-a-core-device-or-not.patch
-Patch2: 0002-Make-the-hyperpen-driver-actually-report-sensible-pr.patch
-
 %description
 Hyperpen is an X.org input driver for HyperPen devices.
 
 %prep
 %setup -q -n xf86-input-hyperpen-%{version}
-
-%patch1 -p1
-%patch2 -p1
 
 %build
 %configure

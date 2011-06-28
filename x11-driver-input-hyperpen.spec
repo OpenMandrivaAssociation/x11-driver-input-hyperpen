@@ -1,7 +1,7 @@
-%define gitdate 20110609
+%define gitdate %nil
 
 Name: x11-driver-input-hyperpen
-Version: 1.3.99.1
+Version: 1.4.0
 Release: %mkrel 1%{?gitdate:.%{gitdate}}
 Summary: X.org input driver for HyperPen devices
 Group: System/X11

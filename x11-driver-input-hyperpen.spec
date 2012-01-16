@@ -1,7 +1,7 @@
 %define gitdate %nil
 
 Name: x11-driver-input-hyperpen
-Version: 1.4.0
+Version: 1.4.1
 Release: %mkrel 1%{?gitdate:.%{gitdate}}
 Summary: X.org input driver for HyperPen devices
 Group: System/X11
@@ -38,6 +38,7 @@ autoreconf -v --install || exit 1
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+rm -f %{buildroot}%{_libdir}/xorg/modules/input/hyperpen_drv.la
 
 %clean
 rm -rf %{buildroot}
@@ -45,5 +46,4 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc COPYING
-%{_libdir}/xorg/modules/input/hyperpen_drv.la
 %{_libdir}/xorg/modules/input/hyperpen_drv.so

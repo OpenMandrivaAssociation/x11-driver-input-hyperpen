@@ -2,7 +2,7 @@
 
 Name: x11-driver-input-hyperpen
 Version: 1.4.1
-Release: %mkrel 1%{?gitdate:.%{gitdate}}
+Release: %mkrel 2%{?gitdate:.%{gitdate}}
 Summary: X.org input driver for HyperPen devices
 Group: System/X11
 URL: http://xorg.freedesktop.org
@@ -12,9 +12,8 @@ Source: xf86-input-hyperpen-%{gitdate}.tar.bz2
 Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-input-hyperpen-%{version}.tar.bz2
 %endif
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: x11-proto-devel >= 1.0.0
-BuildRequires: x11-server-devel >= 1.0.1
+BuildRequires: x11-server-devel >= 1.12
 BuildRequires: x11-util-macros >= 1.0.1
 Conflicts: xorg-x11-server < 7.0
 

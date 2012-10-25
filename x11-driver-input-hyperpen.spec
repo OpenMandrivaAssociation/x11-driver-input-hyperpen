@@ -28,9 +28,9 @@ Hyperpen is an X.org input driver for HyperPen devices.
 %else
 %setup -q -n xf86-input-hyperpen-%{version}
 %endif
+autoreconf -v --install || exit 1
 
 %build
-autoreconf -v --install || exit 1
 %configure2_5x
 %make
 

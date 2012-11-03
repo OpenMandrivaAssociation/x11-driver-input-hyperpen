@@ -4,7 +4,7 @@ Release:	5
 Summary:	X.org input driver for HyperPen devices
 Group:		System/X11
 URL:		http://xorg.freedesktop.org
-Source0:	xf86-input-hyperpen-%{gitdate}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-hyperpen-%{version}.tar.bz2
 License:	MIT
 BuildRequires:	x11-proto-devel >= 1.0.0
 BuildRequires:	x11-server-devel >= 1.12

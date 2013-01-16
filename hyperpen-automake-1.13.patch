@@ -1,0 +1,11 @@
+--- xf86-input-hyperpen-1.4.1/configure.ac.bero	2013-01-16 04:00:27.128600682 +0100
++++ xf86-input-hyperpen-1.4.1/configure.ac	2013-01-16 04:00:32.392540115 +0100
+@@ -35,7 +35,7 @@ AM_MAINTAINER_MODE
+ DRIVER_NAME=hyperpen
+ AC_SUBST([DRIVER_NAME])
+ 
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADERS([config.h])
+ 
+ # Checks for programs.
+ AC_DISABLE_STATIC

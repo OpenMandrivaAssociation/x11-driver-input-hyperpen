@@ -17,7 +17,7 @@ Requires:	x11-server-common %(xserver-sdk-abi-requires xinput)
 Hyperpen is an X.org input driver for HyperPen devices.
 
 %prep
-%setup -q -n xf86-input-hyperpen-%{version}
+%setup -qn xf86-input-hyperpen-%{version}
 %apply_patches
 autoreconf -fiv
 
@@ -30,3 +30,5 @@ autoreconf -fiv
 
 %files
 %doc COPYING
+%{_libdir}/xorg/modules/input/hyperpen_drv.so
+

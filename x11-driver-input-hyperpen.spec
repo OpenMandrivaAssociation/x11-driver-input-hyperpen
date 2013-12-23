@@ -1,7 +1,7 @@
 Summary:	X.org input driver for HyperPen devices
 Name:		x11-driver-input-hyperpen
 Version:	1.4.1
-Release:	11
+Release:	12
 Group:		System/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
